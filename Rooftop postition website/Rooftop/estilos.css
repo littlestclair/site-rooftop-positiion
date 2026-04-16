@@ -1,0 +1,714 @@
+
+@import url("global.css");
+
+/* MAIN MENU */
+.menu{
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu > div{
+    width: 45%;
+}
+
+.menu > div:first-child{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-title{
+    margin: 0 55px 60px 0;
+}
+
+.menu h2{
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 1.5;
+    letter-spacing: 7.2px;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.menu p{
+    margin-bottom: 3.125rem;
+}
+
+.menu button{
+    padding: 0 30px;
+    height: 50px;
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    color: white;
+    font-size: 1rem;
+    width: fit-content;
+    transition: .3s;
+}
+
+.menu button:hover{
+    color: var(--gold);
+    background-color: transparent;
+}
+
+
+/* Comeco (header) */
+header{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+}
+
+header ul{
+    margin: auto;
+    padding-inline: 15px;
+    width: 1140px;
+}
+
+header li{
+    display: inline-block;
+    width: 7%;
+}
+
+header li > a{
+    font-size: 14px;
+    
+    letter-spacing: 2px;
+}
+
+.ativo{
+    color: #ad9966;
+}
+
+/* barrinhas do lado da pagina */
+
+main{
+    position: relative;
+}
+
+.imagem-lado-esquerdo, .imagem-lado-direito{
+    position: fixed;
+    top: 43%;
+    height: 180px;
+    width: 92px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    
+}
+
+.imagem-lado-esquerdo a, 
+.imagem-lado-direito a{
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin-bottom: 16px;
+    position: relative;
+    top: 10px;
+    transition: .4s ease;
+}
+
+.imagem-lado-direito{
+    background-image: url(https://preview.colorlib.com/theme/rooftop/img/book-table-bg.png);
+    right: 0;
+}
+
+.imagem-lado-esquerdo{
+    background-image: url(https://preview.colorlib.com/theme/rooftop/img/view-menu-bg.png);
+    left: 0;
+}
+
+.imagem-lado-direito a{
+    left: 15px;
+    color: white;
+}
+
+.imagem-lado-esquerdo a{
+    right: 15px;
+}
+
+.imagem-lado-direito:hover a{
+    transform: translateX(-10px) rotate(360deg);
+}
+
+.imagem-lado-direito a:hover{
+    color: black;
+}
+
+.imagem-lado-esquerdo:hover a{
+    transform: translateX(15px) rotate(360deg);
+}
+
+/*  Menu Suspenso */
+.dropdown{
+    position: absolute;
+    width: max-content;
+    margin: 0;
+    padding: 1rem;
+    display: none;
+    background-color: whitesmoke;
+    box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown li{
+    display: block;
+    width: fit-content;
+    text-align: left;
+}
+
+.dropdown-button{
+    height: fit-content;
+    position: relative;
+}
+
+.dropdown-button:hover > .dropdown{
+    display: block;
+}
+
+
+/* Logo*/
+#logo{
+    width: 23%;
+    padding: 1%;
+    vertical-align: middle;
+}
+
+#logo img{
+    display: block;
+    margin: auto;
+    height: 79.38px;
+    width: 66.81px;
+}
+
+
+/* hero*/
+#hero{
+    margin-top: 101px;
+    height: 78vh;
+    background-image: url(https://preview.colorlib.com/theme/rooftop/img/header-bg.png);
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    position: relative;
+
+
+}
+
+#hero div{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#hero div h1{
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: .75rem;
+}
+
+#hero div p{
+    padding-top: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#hero div p a{
+    color: whitesmoke;
+    transition: .2s ease;
+}
+
+#hero div p a:hover{
+    color: var(--gold);
+}
+
+hr{
+    height: 1px;
+}
+
+.seta-baixo{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-51%);
+    animation: setaBaixo 1.5s infinite ease-out;
+}
+
+@keyframes setaBaixo {
+    from{
+        opacity: .5;
+        top: 80%;
+    }
+    to{
+        opacity: 1;
+        top: 90%;
+    }
+}
+
+
+/* menu left */
+.menu-esquerda {
+    padding: 7.5rem 0;
+    flex-grow: 1;
+    background-color: rgb(250 245 240);
+}
+
+.menu-esquerda *{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.menu-esquerda h3{
+    font-size: 21px;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    text-decoration: underline;
+    font-weight: lighter;
+}
+
+.menu-esquerda h4{
+    margin-bottom: 10px;
+    font-family: var(--text-font);
+}
+
+.menu-caixa{
+    margin-bottom: 80px;
+}
+
+.menu-caixa:last-child{
+    margin-bottom: 0;
+}
+
+
+/* galeria*/
+.galeria{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.img{
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    margin: .5rem;
+}
+
+.mais{
+    position: absolute;
+    width: 40px;
+    top: 30%;
+    left: 45%;
+    transition: .3s ease-out;
+    opacity: 0;
+    fill: white;
+    z-index: 1;
+}
+
+/* Escurecer o BG */
+.img:hover img{
+    filter: brightness(40%);
+}
+
+/* efeito ícone + */
+.img:hover .mais{
+    top: 50%;
+    transform: rotate(90deg);
+    opacity: 100%;
+}
+
+/* posicionamento específico das imagens */
+.galeria .img:nth-child(1){
+    top: -200px;
+}
+
+.galeria .img:nth-child(2){
+    top: -100px;
+}
+
+.galeria .img:nth-child(3){
+    top: -225px;
+    left: 100px;
+}
+
+.galeria .img:nth-child(4){
+    top: -100px;
+    left: 100px;
+}
+
+/* texto form */
+.form-text{
+    width: 35%;
+    margin-left: 95px;
+    padding: 0 15px;
+}
+
+.form-text div{
+    padding: 0 55px 30px 0;
+}
+
+.form-text h2{
+    margin-bottom: 1.25rem;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 7.2px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+/* Formataçaõ form */
+.formulario{
+    width: 1140px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+}
+
+form{
+    flex-grow: 1;
+    padding: 120px 50px 240px;
+    background-color: rgb(250 245 240);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+form > div{
+    display: flex;
+    gap: 1.25rem;
+}
+
+input, .select{
+    width: 100%;
+    display: inline-block;
+}
+
+.select{
+    background-color: whitesmoke;
+    padding: 8px 12px;
+    color: #777777;
+    font-size: 14px;
+    position: relative;
+    font-family: var(--text-font);
+    display: flex;
+    align-items: center;
+}
+
+.select:hover div{
+    display: block;
+}
+
+.select i{
+    margin-left: auto;
+}
+
+.select div{
+    position: absolute;
+    box-shadow:  0 0 3px rgba(68, 68, 68, 0.11);
+    border-radius: 5px;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    display: none;
+    border-top: 3px solid transparent;
+}
+
+.select li:first-child{
+    font-weight: bold;
+}
+
+.metade-tamanho{
+    flex-grow: 1;
+}
+
+textarea{
+    height: 150px;
+}
+
+.form-button{
+    color: white;
+    background-color: black;
+    padding: 0 30px;
+    height: 50px;
+    font-size: 1rem;
+    width: fit-content;
+    margin-left: auto;
+    border: 1px solid black;
+    transition: .3s;
+}
+
+.form-button:hover{
+    color: var(--gold);
+    border-color: var(--gold);
+    background-color: transparent;
+}
+
+
+.select li:hover{
+    background-color: #f6f6f6;
+}
+
+
+.select li{
+    padding: 0 29px 0 18px;
+    background-color: white;
+    font-size: 14px;
+    color: #222222;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.select:hover .select > div{
+    display: block;
+}
+
+
+
+/* Carrosel */
+
+.carrosel{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 1400px;
+}
+
+.carrosel-imagem{
+    background-image: url(https://preview.colorlib.com/theme/rooftop/img/callaction-bg.jpg);
+    width: 1140px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+}
+
+.carrosel-content{
+    background-color: white;
+    padding: 33px 20px;
+    width: 513px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carrosel-content h3{
+    margin-bottom: 40px;
+    font-size: 21px;
+    width: fit-content;
+    position: relative;
+    font-style: italic;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.carrosel-content h3::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width:  60%;
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: -10px;
+    left: 20%;
+}
+
+.seta{
+    opacity: .3;
+    margin: 0 2rem;
+    cursor: pointer;
+}
+
+.seta:hover{
+    opacity: .7;
+}
+
+/* Location */
+
+.localizacao{
+    width: 1140px;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 120px 0;
+}
+
+.localizacao iframe{
+    flex: 1 0 45%;
+    aspect-ratio: 3/4;
+}
+
+.localizacao-texto{
+    padding: 0 15px;
+    margin-left: 95px;
+}
+
+.localizacao-texto h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: lighter;
+    letter-spacing: 7.2px;
+    width: 420px;
+}
+
+.localizacao-texto p{
+    margin-bottom: 5px;
+}
+
+.localizacao-texto > div{
+    margin-bottom: 40px;
+}
+
+/* Pézada (footer) */
+
+footer{
+    background-color: #04091e;
+    padding: 120px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-conteudo{
+    width: 1140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-principal{
+    display: flex;
+}
+
+.grupo-lista{
+    width: 200px;
+}
+
+.grupo-lista:last-child{
+    flex-grow: 2;
+}
+
+.grupo-lista a{
+    color: var(--text-color);
+}
+
+.grupo-lista h3{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.grupo-lista li, p{
+    margin-bottom: 10px;
+}
+
+a:hover{
+    color: var(--gold);
+}
+
+.grupo-lista div{
+    display: flex;
+}
+
+.grupo-lista button{
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ad9966;
+}
+
+.grupo-lista input{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    caret-color: white;
+    color: white;
+}
+
+.conteudo-secundario{
+    margin-top: 50px;
+    display: flex;
+}
+
+.conteudo-secundario a{
+    color: var(--gold);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-secundario a:hover{
+    color: white;
+}
+
+.conteudo-secundario div{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    gap: 3px;
+}
+
+/* notas do chef viado */
+.notas-chef{
+    width: 1140px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+}
+
+.notas-chef-text{
+    padding: 0 15px 30px;
+    margin-top: 50px;
+}
+
+.notas-chef-text h2{
+    margin-bottom: 1.25rem;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 7.2px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.notas-chef-text p{
+    margin-bottom: 50px;
+}
+
+.notas-chef-text img{
+    margin-inline: 0 auto;
+}
+
+.chef-img{
+    margin-left: 95px;
+    padding: 0 15px;
+    position: relative;
+    top: -115px;
+}
+
+
+
+
+
+
+
+

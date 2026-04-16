@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.7;
+}
+p{
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+span{
+    color: #ad9966;
+}
+
+button{
+    border: none;
+    font-family: var(--text-font);
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+a, li{
+    text-decoration: none;
+    color: var(--title-color);
+    font-family: var(--text-font);
+}
+
+:root {
+    --gold: #ad9966;
+    --title-color: #000;
+    --text-color: #777777;
+    --title-font: 'Playfair Display', serif;
+    --text-font: "Roboto";
+}
+
+h1, h2, h3{
+    font-family: var(--title-font);
+    line-height: 1.5em;
+}
+
+button{
+    border: none;
+    font-family: var(--text-font);
+    cursor: pointer;
+}
+
+input, textarea{
+    border: none;
+    font-family: var(--text-font);
+    padding: .5rem .75rem;
+    
+}
+
+input:focus, textarea:focus, select:focus, option:focus{
+    outline: none;
+}
+
+
+
+p{
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+span{
+    color: #ad9966;
+}
+
+
+
